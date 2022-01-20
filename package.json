@@ -1,0 +1,25 @@
+{
+  "name": "keval",
+  "version": "1.0.0",
+  "description": "Basic structure",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"$NODE_ENV\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "iserioton",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-mung": "^0.5.1",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.3.0",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
