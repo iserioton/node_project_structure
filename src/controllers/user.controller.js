@@ -10,12 +10,12 @@ const { userService } = require('../services');
  * @param {*} next
  */
 async function userCreate(req, res, next) {
-    try {
-        const data = await userService.userCreate(req.body);
-        return res.send(data);
-    } catch (error) {
-        return next(error);
-    }
+	try {
+		const data = await userService.userCreate(req.body);
+		return res.send(data);
+	} catch (error) {
+		return next(error);
+	}
 };
 
 /**
@@ -26,13 +26,13 @@ async function userCreate(req, res, next) {
  * @returns
  */
 async function userLogin(req, res, next) {
-    try {
-        const ip = req.headers['x-real-ip'] || req.socket.remoteAddress;
-        const data = await userService.userLogin(req.body, ip);
-        return res.send(data);
-    } catch (error) {
-        return next(error);
-    }
+	try {
+		const ip = req.headers['x-real-ip'] || req.socket.remoteAddress;
+		const data = await userService.userLogin(req.body, ip);
+		return res.send(data);
+	} catch (error) {
+		return next(error);
+	}
 };
 
 /**
@@ -43,17 +43,17 @@ async function userLogin(req, res, next) {
  * @returns 
  */
 async function userLogout(req, res, next) {
-    try {
-        const data = await userService.userLogout(req._userId);
-        return res.send(data);
-    } catch (error) {
-        return next(error);
-    }
+	try {
+		const data = await userService.userLogout(req._userId);
+		return res.send(data);
+	} catch (error) {
+		return next(error);
+	}
 };
 
 /* EXPORTS ================================================================ */
 module.exports = {
-    userCreate,
-    userLogin,
-    userLogout
+	userCreate,
+	userLogin,
+	userLogout
 };

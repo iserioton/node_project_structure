@@ -2,7 +2,7 @@
 
 /* REQUIRES ================================================================ */
 const mung = require('express-mung');
-const { RESPONSE } = require('../constants/app.constants');
+const RESPONSE = require('../constants/app.constants');
 
 /* METHODS ================================================================= */
 /**
@@ -13,12 +13,12 @@ const { RESPONSE } = require('../constants/app.constants');
  * @returns
  */
 function apiResponseMiddleware(body, req, res) {
-    if (body.response_code === RESPONSE.ERROR.code) return body;
-    return {
-        response_code: RESPONSE.SUCCESS.code,
-        message: body.message || RESPONSE.SUCCESS.message,
-        data: body || {},
-    };
+	if (body.response_code === RESPONSE.ERROR.code) return body;
+	return {
+		response_code: RESPONSE.SUCCESS.code,
+		message: body.message || RESPONSE.SUCCESS.message,
+		data: body || {},
+	};
 };
 
 /* EXPORTS ================================================================== */

@@ -11,7 +11,7 @@ const { ER_API_NOT_FOUND } = require('../constants/errorMessaegs.constants');
  * @param {*} next
  */
 function apiNotFoundMiddleware(req, res, next) {
-    next(ER_API_NOT_FOUND);
+	next(ER_API_NOT_FOUND);
 };
 
 /* EXPORTS ================================================================================ */

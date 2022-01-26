@@ -2,7 +2,7 @@
 
 /* REQUIRES ===================================================================== */
 const common = require('common-utils'),
-    mysqlPool = require('./connection.mysql');
+	mysqlPool = require('./connection.mysql');
 
 /* FUNCTIONS ===================================================================== */
 /**
@@ -14,11 +14,11 @@ const common = require('common-utils'),
  * @param {*} group_by
  */
 function selectRow(table_name, fields = '*', where = null, order_by = null, group_by = null) {
-    return [];
+	return [];
 }
 
 
 /* EXPORTS ==================================================================== */
 module.exports = {
-    selectRow
+	selectRow
 };

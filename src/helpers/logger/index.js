@@ -1,9 +1,15 @@
 'use strict';
 
-const { appConfg } = require('../../config');
+const { appConfg, MODE } = require('../../config');
 const log4js = require('log4js');
 
 const logger = log4js.getLogger(`[${appConfg.project}]`);
-logger.level = 'info';
+
+if (MODE == 'production') {
+	logger.level = 'production';
+	console.log = function () { }
+} else {
+	logger.level = 'info';
+}
 
 module.exports = logger;

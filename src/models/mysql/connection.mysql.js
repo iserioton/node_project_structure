@@ -2,10 +2,10 @@
 
 /* REQUIRES ===================================================================== */
 const mysql = require('mysql');
-const { mysql } = require('../config');
+const { mysqlCredentials } = require('../../config');
 
 /* CONNECTION ==================================================================== */
-let pool = new mysql.createPool(mysql);
+let pool = new mysql.createPool(mysqlCredentials);
 
 /* EXPORTS ==================================================================== */
 exports.mysqlPool = pool;
