@@ -1,4 +1,12 @@
 'use strict';
+
+/**
+ * Config env according to app mode
+ */
+const path = require('path');
+const configEnvPath = path.join('./config/.env_' + process.env.NODE_ENV);
+require('dotenv').config(configEnvPath);
+
 /**
  * Requires
  */

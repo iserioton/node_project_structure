@@ -1,7 +1,5 @@
 'use strict';
 
-require('dotenv').config();
-
 const ENV_VARS = {
 	MODE: process.env.NODE_ENV,
 	appConfg: {
