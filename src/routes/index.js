@@ -1,11 +1,11 @@
 'use strict';
 
 /* REQUIRES ============================================================ */
-const router = new require('express').Router();
-const userRoutes = require('./user.routes');
+const router = require('express').Router();
+const { user } = require('../controllers')
 
 /* ROUTER USES ========================================================= */
-router.use('/user', userRoutes);
+router.use('/user', user);
 
 /* EXPORTS ============================================================= */
 module.exports = router;

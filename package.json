@@ -2,7 +2,7 @@
 	"name": "keval",
 	"version": "1.0.0",
 	"description": "Basic structure",
-	"main": "./src/app.js",
+	"main": "./server.js",
 	"scripts": {
 		"node_version": "node -v",
 		"test": "echo \"$NODE_ENV\" && exit 1",
@@ -12,17 +12,12 @@
 	"license": "ISC",
 	"dependencies": {
 		"common-utils": "file:common-utils",
-		"compression": "^1.7.4",
-		"cors": "^2.8.5",
-		"dotenv": "^10.0.0",
-		"express": "^4.17.1",
-		"express-mung": "^0.5.1",
-		"helmet": "^5.0.2",
-		"http": "0.0.1-security",
-		"jsonwebtoken": "^8.5.1",
-		"log4js": "^6.3.0",
-		"md5": "^2.3.0",
-		"mysql": "^2.18.1"
+		"compression": "1.7.4",
+		"dotenv": "10.0.0",
+		"express": "4.17.1",
+		"helmet": "5.0.2",
+		"jsonwebtoken": "8.5.1",
+		"mysql": "2.18.1"
 	},
 	"devDependencies": {
 		"eslint": "^8.7.0",
