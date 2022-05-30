@@ -6,14 +6,14 @@
 	"scripts": {
 		"node_version": "node -v",
 		"test": "echo \"$NODE_ENV\" && exit 1",
-		"start": "npm run node_version&& set NODE_ENV=local&& nodemon"
+		"start": "set NODE_ENV=local&& nodemon"
 	},
 	"author": "iserioton",
 	"license": "ISC",
 	"dependencies": {
 		"common-utils": "file:common-utils",
 		"compression": "1.7.4",
-		"dotenv": "10.0.0",
+		"dotenv": "^16.0.1",
 		"express": "4.17.1",
 		"helmet": "5.0.2",
 		"jsonwebtoken": "8.5.1",

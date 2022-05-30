@@ -1,12 +1,17 @@
 'use strict';
 
 /**
+ * Config env according to app mode
+ */
+require('dotenv').config({ path: './src/config/.env_' + process.env.NODE_ENV });
+
+/**
  * Requires
  */
-const config = require('./config');
 const express = require('express');
 const compression = require('compression')
 const helmet = require('helmet');
+const config = require('./config');
 const routes = require('./routes');
 
 
@@ -20,6 +25,11 @@ app.use(compression());
 app.set('port', config.port);
 
 app.use(`/${config.apiVersion}`, routes);
+
+/** 404 API */
+app.use('/', (req, res) => {
+	res.status(404).send('You are looking for page is not found');
+})
 
 /** Catch process level error and generate log for forther. */
 process.on('uncaughtException', (err) => {

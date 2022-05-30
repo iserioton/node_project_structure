@@ -1,15 +1,5 @@
 'use strict';
 
-/**
- * Config env according to app mode
- */
-const path = require('path');
-const configEnvPath = path.join('./.env_' + process.env.NODE_ENV);
-console.log('configEnvPath',configEnvPath)
-require('dotenv').config({ path: configEnvPath });
-
-console.log('PROJECT_NAME', process.env.PROJECT_NAME)
-console.log('NODE_ENV', process.env.NODE_ENV)
 const ENV_VARS = {
 	MODE: process.env.NODE_ENV,
 	port: process.env.PORT,
